@@ -20,10 +20,28 @@ class ExampleTest extends TestCase
 
 //         $response->assertStatus(200);
 //     }
-    
+    public function sum($i,$a){
+    	return $i+$a;
+    }
     
     public function testBasicTest()
     {
-    	$this->assertTrue(true);
+    	$this->assertContains(4, [1, 2, 3]);
+    	
+    	//$this->assertTrue(true);
+   
+    }
+    
+    public function testPushAndPop()
+    {
+    	$stack = [];
+    	$this->assertEquals(0, count($stack));
+    	
+    	array_push($stack, 'foo');
+    	$this->assertEquals('foo', $stack[count($stack)-1]);
+    	$this->assertEquals(1, count($stack));
+    	
+    	$this->assertEquals('foo', array_pop($stack));
+    	$this->assertEquals(0, count($stack));
     }
 }
