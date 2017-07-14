@@ -26,7 +26,7 @@ class ExampleTest extends TestCase
     
     public function testBasicTest()
     {
-    	$this->assertContains(4, [1, 2, 3]);
+    	$this->assertContains(2, [1, 2, 3]);
     	
     	//$this->assertTrue(true);
    
